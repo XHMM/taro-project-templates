@@ -1,6 +1,6 @@
 import Taro, { FC } from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import './<%= pageName %>.<%= cssExt %>'
+import './index.<%= cssExt %>'
 
 import Login from '../../components/login/index'
 
