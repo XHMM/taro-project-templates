@@ -1,40 +1,28 @@
-import Taro, { Component } from "@tarojs/taro"
-import { View, Text, Button } from "@tarojs/components"
+import Taro, { FC } from "@tarojs/taro";
+import { View, Text, Button } from "@tarojs/components";
 
-export default class Login extends Component {
-  state = {
-    context: {}
-  }
+interface Props {}
+const Index: FC<Props> = ({}) => {
+  const [data, setData] = useState('');
 
-  componentWillMount() {}
-
-  componentDidMount() {}
-
-  componentWillUnmount() {}
-
-  componentDidShow() {}
-
-  componentDidHide() {}
-
-  getLogin = () => {
+  const getLogin = () => {
     Taro.cloud
-      .callFunction({
-        name: "login",
-        data: {}
-      })
-      .then(res => {
-        this.setState({
-          context: res.result
-        })
-      })
-  }
+    .callFunction({
+      name: "login",
+      data: {}
+    })
+    .then(res => {
+      setData(JSON.stringify(res.result))
 
-  render() {
-    return (
-      <View className='index'>
-        <Button onClick={this.getLogin}>获取登录云函数</Button>
-        <Text>context：{JSON.stringify(this.state.context)}</Text>
-      </View>
-    )
-  }
-}
+    });
+  };
+
+  return (
+    <View className="index">
+      <Button onClick={getLogin}>获取登录云函数</Button>
+      <Text>context：{data}</Text>
+    </View>
+  );
+};
+
+export default Index;

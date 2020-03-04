@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "moduleResolution": "Node",
+    "module": "CommonJS",
+    "lib": ["dom", "es6"],
+    "skipLibCheck": true
+  },
+  "include": ["functions"],
+  "exclude": ["functions/**/node_modules"]
+}
