@@ -8,6 +8,6 @@ Templates for `taro init`
 
 
 ## folk使用说明
-**注意：** 当你仅在要使用 `typescript` 搭配 `wxcloud模板` 时在考虑使用该仓库作为模板源，使用步骤如下：
+**注意：** 当你仅在要使用 `typescript` 搭配 `wxcloud`模板时，在考虑使用该仓库作为模板源，使用步骤如下：
 1. 修改模板源：`taro config set templateSource github:XHMM/taro-project-templates#2.0`
 1. 在使用 `taro init` 时，选择 `typescript` 模式，然后选择 `wxcloud` 模板。
